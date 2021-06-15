@@ -1,8 +1,7 @@
-from flask import Flask, render_template, url_for, flash, redirect
-from forms import RegistrationForm, LoginForm
-
-app = Flask(__name__)
-app.config['SECRET_KEY'] = '123456789'
+from flask import render_template, url_for, flash, redirect
+from scooteq import app
+from scooteq.forms import RegistrationForm, LoginForm
+from scooteq.models import User
 
 
 @app.route('/')
@@ -31,12 +30,8 @@ def login():
     if form.validate_on_submit():
         if form.username.data == 'admin@blog.com' and form.password.data == 'password':
             flash('You have been logged in!', 'success')
-            return  redirect(url_for('home'))
+            return redirect(url_for('home'))
         else:
             flash('login Unsuccessful. Please check username and password', 'danger')
 
     return render_template('login.html', title='Login', form=form)
-
-
-if __name__ == '__main__':
-    app.run(debug=True)
