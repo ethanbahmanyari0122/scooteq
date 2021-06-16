@@ -21,6 +21,7 @@
 
 
 
+
   <script>"use strict";
 
 let hour = 0;
@@ -45,9 +46,9 @@ function pause() {
 }
 
 function stop() {
+  alert("You have to pay: " + calculation() + "€")
   clearInterval(cron);
   reset();
-  alert(calculation());
 }
 
 function reset() {
@@ -88,7 +89,7 @@ function calculation(){
         var usingTime = (hour * 60) + minute + (second / 60);
         var price = 0.30;
         var result = usingTime * price;
-        return result;
+        return result.toFixed(2) ;
 }
 
 </script>
