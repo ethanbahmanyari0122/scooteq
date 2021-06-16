@@ -78,3 +78,145 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+
+
+.display{
+    width: 500px;
+    height: 460px;
+    background-color: #428bca;
+    border-radius: 15px;
+    box-shadow: 0px 0px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.30) ;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.control {
+  display: block;
+}
+
+.start{
+  display: block;
+  width: 300px;
+  text-align: center;
+  background-color: lightsteelblue;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.30) ;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.start:hover{
+  background-color: darkslateblue;
+}
+
+.start:active{
+  background-color: #e3e3e3;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.stop{
+  display: block;
+  width: 300px;
+  text-align: center;
+  background-color: lightsteelblue;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.30) ;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.stop:hover{
+  background-color: darkslateblue;
+}
+
+.stop:active{
+  background-color: #e3e3e3;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.pause{
+  display: block;
+  width: 300px;
+  text-align: center;
+  background-color: lightsteelblue;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.30) ;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.pause:hover{
+  background-color: darkslateblue;
+}
+
+.pause:active{
+  background-color: #e3e3e3;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+.reset{
+  display: block;
+  width: 300px;
+  text-align: center;
+  background-color: lightsteelblue;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 5px 0;
+  border-radius: 15px;
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.15), 0 0 10px rgba(0, 0, 0, 0.30) ;
+  border: 0;
+  outline: 0;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.reset:hover{
+  background-color: darkslateblue;
+}
+
+.reset:active{
+  background-color: #e3e3e3;
+  box-shadow: none;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+
+
+.timer {
+  font-size: 50px;
+  color: white;
+  font-family: SansSerif;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
