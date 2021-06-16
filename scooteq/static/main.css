@@ -80,6 +80,23 @@ a.article-title:hover {
 }
 
 
+.headline{
+  margin-top: 15px;
+  font-size: 75px;
+  font-family: aakar;
+}
+
+.headlinSco {
+  font-size: 100px;
+  font-weight: bold;
+  margin-top:-15px;
+  font-family: aakar;
+}
+
+.underHeadline{
+  font-size: 30px;
+  margin-top: -20px;
+}
 
 .display{
     width: 500px;
