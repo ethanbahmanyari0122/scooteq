@@ -8,7 +8,6 @@ import os
 
 
 @app.route('/')
-@app.route('/home')
 def home():
     return render_template('home.html')
 
@@ -84,3 +83,9 @@ def account():
         form.email.data = current_user.email
     image_file = url_for('static', filename='pictures/' + current_user.image_file)
     return render_template('account.html', title='Account', image_file=image_file, form=form)
+
+
+@app.route('/home')
+@login_required
+def start():
+    return render_template('start.html')
