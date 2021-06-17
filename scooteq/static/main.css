@@ -82,6 +82,7 @@ a.article-title:hover {
 
 .headline{
   margin-top: 15px;
+  margin-bottom: -25px;
   font-size: 75px;
   font-family: aakar;
 }
