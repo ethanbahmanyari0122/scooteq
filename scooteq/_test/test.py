@@ -1,11 +1,11 @@
 from scooteq.routes import app
 import unittest
+from flask import redirect
 
 class TestFoo(unittest.TestCase):
     #The Configuration
     def setUp(self):
         app.config['TESTING'] = True
-        app.config['DEBUG'] = True
         self.app = app.test_client()
 
     #Test if the home page has correct http status
@@ -26,9 +26,16 @@ class TestFoo(unittest.TestCase):
 
     #Test correct login
     def test_correct_login(self):
-        respone = self.app.post('/login', data=dict(username="rawezh11", password="1234567"),
+        response = self.app.post('/login', data=dict(username="rawezh11", password="1234567"),
                               follow_redirects=True)
-        self.assertEqual(respone.status_code, 200)
+        self.assertEqual(response.status_code, 200)
+
+    # Test correct logout
+    def test_correct_logout(self):
+        self.app.post('/login', data=dict(username="rawezh11", password="1234567"),
+                                    follow_redirects=True)
+        response = self.app.get('/logout', content_type="html/text")
+        self.assertTrue(redirect("/"), response.data)
 
     #Test registration
     def test_registration(self):
@@ -36,7 +43,7 @@ class TestFoo(unittest.TestCase):
                                                        username="paul1", email="paul@germany.de",
                                                        password="123456789", confirmpassword="123456789"),
                                 follow_redirects=True)
-        self.assertIn(b'Your account has been created! paul! Please login.', respone.data)
+        self.assertTrue(b'Your account has been created! paul! Please login.', respone.data)
 
 
 
