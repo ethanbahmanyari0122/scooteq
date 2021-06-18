@@ -7,12 +7,12 @@ let millisecond = 0;
 
 let cron;
 
-document.form_main.start.onclick = () => start();
+document.form_main.start.onclick = () => timer_calculation();
 document.form_main.stop.onclick = () => stop();
 document.form_main.pause.onclick = () => pause();
 document.form_main.reset.onclick = () => reset();
 
-function start() {
+function timer_calculation() {
   pause();
   cron = setInterval(() => { timer(); }, 10);
 }
